@@ -1,9 +1,8 @@
 package Sorting;
 
-public class BubbleSort2 {
-    // optimized code
-
+public class ReverseBubbleSort {
     public static void print(int[] arr) {
+
         for (int element : arr) {
             System.out.print(element + " ");
 
@@ -20,7 +19,7 @@ public class BubbleSort2 {
             int swaps = 0;
 
             for (int j = 0; j < n - 1 - i; j++) {
-                if (arr[j] > arr[j + 1]) {
+                if (arr[j] < arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
@@ -28,17 +27,8 @@ public class BubbleSort2 {
                 }
             }
 
-            if (swaps == 0) {
-                break;
-            }
-
+            if (swaps == 0) break ;
         }
         print(arr);
-
     }
 }
-
-// conclusion :
-// 1 --> hum har pass se pehele check krenge puri array vo sorted to nhi h agr
-// sorted h to break ho jayega nhi h to bubble sort ka ek paas chlega fir dubara
-// check hogi and so on....
